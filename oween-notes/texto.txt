@@ -1,0 +1,44 @@
+import { useState } from 'react'
+import SignupInvitation from './components/SignupInvitation';
+import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+ 
+function LandingPage() {
+  return (
+    <>
+       
+      <h1>Software Engineering Project Landing Page</h1>
+      <div className='project-description'>  
+            Discover if you would have survived the legendary Titanic disaster with our AI-powered prediction tool. 
+            Explore different passenger parameters and see how they affect survival chances.
+      </div>
+      <div className='offers'>
+        <h2> What do we offer to you? </h2> 
+        <ul className='offers-list'>
+          <li> Service 1 </li>
+          <li> Service 2</li>
+          <li> Service 3 </li>
+          <li> Service 4 </li> 
+        </ul>  
+          
+      </div>
+      <SignupInvitation />
+
+     
+
+
+    </>
+  );
+}
+
+function App() {
+  return (
+      
+      <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      </Routes>
+  );
+}
+export default App;
